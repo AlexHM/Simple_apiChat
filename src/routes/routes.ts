@@ -21,12 +21,7 @@ export class Routes{
         this.enrutador.get("/users",(req:Request,res:Response)=>{
             Controller.getUsers(req,res)
         });
-        this.enrutador.get("/messages/:idUser",(req:Request,res:Response)=>{
-            Controller.findMsg(req,res)
-        })
-        this.enrutador.get("/users/:idUser",(req:Request,res:Response)=>{
-            Controller.findMsg(req,res)
-        })
+       
         
     }
 }

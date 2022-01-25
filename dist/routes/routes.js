@@ -21,12 +21,6 @@ class Routes {
         this.enrutador.get("/users", (req, res) => {
             controller_1.default.getUsers(req, res);
         });
-        this.enrutador.get("/messages/:idUser", (req, res) => {
-            controller_1.default.findMsg(req, res);
-        });
-        this.enrutador.get("/users/:idUser", (req, res) => {
-            controller_1.default.findMsg(req, res);
-        });
     }
 }
 exports.Routes = Routes;

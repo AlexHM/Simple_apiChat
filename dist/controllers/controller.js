@@ -61,31 +61,5 @@ class Controller {
             }
         });
     }
-    findMsg(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let data = yield message_1.default.findOne({
-                    idUser: req.params.idUser
-                });
-                res.status(200).json({ res: data });
-            }
-            catch (error) {
-                res.status(404).json({ res: "Error", error });
-            }
-        });
-    }
-    findUser(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            try {
-                let data = yield user_1.default.findOne({
-                    idUser: req.params.idUser
-                });
-                res.status(200).json({ res: data });
-            }
-            catch (error) {
-                res.status(404).json({ res: "Error", error });
-            }
-        });
-    }
 }
 exports.default = new Controller();

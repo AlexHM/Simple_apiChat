@@ -50,26 +50,7 @@ class Controller{
         }
     }
 
-    public async findMsg(req:Request,res:Response){
-        try {
-            let data = await Message.findOne({
-                idUser: req.params.idUser
-            })
-            res.status(200).json({res:data})
-        } catch (error) {
-            res.status(404).json({res:"Error",error})
-        }
-    }
-    public async findUser(req:Request,res:Response){
-        try {
-            let data = await User.findOne({
-                idUser: req.params.idUser
-            })
-            res.status(200).json({res:data})
-        } catch (error) {
-            res.status(404).json({res:"Error",error})
-        }
-    }
+   
 }
 
 export default new Controller();
