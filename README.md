@@ -68,8 +68,6 @@ The message request has this format:
 
 Get a message ```localhost:3000/messages```
 
-Find a message ```localhost:3000/message/1```
-
 Server response:
 
 ```sh
@@ -94,8 +92,6 @@ The user request has this format:
 ```
 
 Get users ```localhost:3000/user```
-
-Find a user ```localhost:3000/user/1```
 
 Server response:
 
