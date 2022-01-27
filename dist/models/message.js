@@ -4,15 +4,15 @@ const mongoose_1 = require("mongoose");
 const messageSchema = new mongoose_1.Schema({
     idUser: {
         type: Number,
-        required: true
+        required: true,
     },
     msg: {
         type: String,
-        required: true
+        required: true,
     },
     date: {
         type: String,
-        required: true
-    }
+        required: true,
+    },
 });
 exports.default = (0, mongoose_1.model)("message", messageSchema);

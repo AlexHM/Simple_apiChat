@@ -31,7 +31,22 @@ class Controller {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 let data = yield message_1.default.find();
-                res.status(200).json({ res: data });
+                res.status(200).json(data);
+            }
+            catch (error) {
+                res.status(404).json({ res: "Error", error });
+            }
+        });
+    }
+    deleteMsg(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                let findMsg = yield message_1.default.find({ idUser: req.params.idUser });
+                if (findMsg) {
+                    let deleteMsg = yield message_1.default.deleteOne({ idUser: req.params.idUser });
+                    res.status(200).json({ res: "message deleted" });
+                }
+                res.status(404).json({ res: "Message not found" });
             }
             catch (error) {
                 res.status(404).json({ res: "Error", error });
@@ -55,6 +70,20 @@ class Controller {
             try {
                 let data = yield user_1.default.find();
                 res.status(200).json({ res: data });
+            }
+            catch (error) {
+                res.status(404).json({ res: "Error", error });
+            }
+        });
+    }
+    findUser(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const user = yield user_1.default.findOne({ username: req.params.username });
+                if (user) {
+                    res.status(200).json({ res: user });
+                }
+                res.status(400).json({ res: "User not found" });
             }
             catch (error) {
                 res.status(404).json({ res: "Error", error });
