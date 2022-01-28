@@ -78,6 +78,16 @@ Server response:
 }
 ```
 
+Delete a message ```localhost:3000/deletemessage/4```
+
+Server response:
+
+```sh
+{
+    "res": "message deleted"
+}
+```
+
 ### User 
 Add user ```localhost:3000/user```
 
