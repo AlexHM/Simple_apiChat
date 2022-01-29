@@ -2,6 +2,7 @@ import { application, Request, Response } from "express";
 import Message from "../models/message";
 import User from "../models/user";
 import config from "../config/config";
+import message from "../models/message";
 
 class Controller {
   public async sendMsg(req: Request, res: Response) {
@@ -25,14 +26,16 @@ class Controller {
 
   public async deleteMsg(req: Request, res: Response) {
     try {
-      let findMsg = await Message.find({ idUser: req.params.idUser });
+      let findMsg = await Message.findOne({ msg: req.params.msg });
 
       if (findMsg) {
-        let deleteMsg = await Message.deleteOne({ idUser: req.params.idUser });
+        const messageToDelete = await Message.deleteOne({
+          msg: req.params.msg,
+        });
         res.status(200).json({ res: "message deleted" });
+      } else {
+        res.status(404).json({ res: "Message not found" });
       }
-
-      res.status(404).json({ res: "Message not found" });
     } catch (error) {
       res.status(404).json({ res: "Error", error });
     }

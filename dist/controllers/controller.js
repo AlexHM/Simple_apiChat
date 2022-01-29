@@ -41,12 +41,16 @@ class Controller {
     deleteMsg(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                let findMsg = yield message_1.default.find({ idUser: req.params.idUser });
+                let findMsg = yield message_1.default.findOne({ msg: req.params.msg });
                 if (findMsg) {
-                    let deleteMsg = yield message_1.default.deleteOne({ idUser: req.params.idUser });
+                    const messageToDelete = yield message_1.default.deleteOne({
+                        msg: req.params.msg,
+                    });
                     res.status(200).json({ res: "message deleted" });
                 }
-                res.status(404).json({ res: "Message not found" });
+                else {
+                    res.status(404).json({ res: "Message not found" });
+                }
             }
             catch (error) {
                 res.status(404).json({ res: "Error", error });

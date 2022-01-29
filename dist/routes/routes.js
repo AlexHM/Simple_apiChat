@@ -24,7 +24,7 @@ class Routes {
         this.enrutador.get("/users/:username", (req, res) => {
             controller_1.default.findUser(req, res);
         });
-        this.enrutador.delete("/deletemessage/:idUser", (req, res) => {
+        this.enrutador.delete("/deletemessage/:msg", (req, res) => {
             controller_1.default.deleteMsg(req, res);
         });
     }

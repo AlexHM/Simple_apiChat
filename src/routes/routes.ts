@@ -23,7 +23,7 @@ export class Routes {
       Controller.findUser(req, res);
     });
     this.enrutador.delete(
-      "/deletemessage/:idUser",
+      "/deletemessage/:msg",
       (req: Request, res: Response) => {
         Controller.deleteMsg(req, res);
       }
