@@ -22,7 +22,6 @@ The database doesn't require any configuration as it implements automatically wi
 | [Express](https://www.npmjs.com/package/express)   |
 | [Mongoose](https://www.npmjs.com/package/mongoose) |
 | [Cors](https://www.npmjs.com/package/cors)         |
-
 | [Morgan](https://www.npmjs.com/search?q=morgan)
 | [Typescript](https://www.typescriptlang.org/download) |
 | [Tsc-watch](https://www.typescriptlang.org/docs/handbook/configuring-watch.html#configuring-file-watching-using-environment-variable-tsc_watchfile) |
