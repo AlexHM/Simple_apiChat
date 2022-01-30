@@ -8,8 +8,6 @@
 - Examples
 - Authors
 
-
-
 ## Database
 
 The used database is [MongoDB](https://www.mongodb.com/es) (Installation required).
@@ -17,44 +15,41 @@ The database doesn't require any configuration as it implements automatically wi
 
 [![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png)](https://www.mongodb.com/es)
 
-
 ## Dependencies
 
-| Packages |
-| -------- | 
-| [Express](https://www.npmjs.com/package/express) |
+| Packages                                           |
+| -------------------------------------------------- |
+| [Express](https://www.npmjs.com/package/express)   |
 | [Mongoose](https://www.npmjs.com/package/mongoose) |
-| [Cors](https://www.npmjs.com/package/cors) |
+| [Cors](https://www.npmjs.com/package/cors)         |
+
 | [Morgan](https://www.npmjs.com/search?q=morgan)
-| [Typescript](https://www.typescriptlang.org/download) | 
+| [Typescript](https://www.typescriptlang.org/download) |
 | [Tsc-watch](https://www.typescriptlang.org/docs/handbook/configuring-watch.html#configuring-file-watching-using-environment-variable-tsc_watchfile) |
 | [@types/express](https://www.npmjs.com/package/@types/express) |
 | [@types/morgan](https://www.npmjs.com/package/@types/morgan) |
 | [@types/cors](https://www.npmjs.com/package/@types/cors) |
 
-## How to use 
+## How to use
 
 First command should be the installation:
-
 
 ```sh
 npm install
 ```
 
-
 Then you can easily run the server with:
-
 
 ```sh
 npm start
 ```
-
 
 The server will start by default on port 3000.
 
 ## Examples
 
 ### Message
+
 Send message (url: localhost:3000/message).
 The message request has this format:
 
@@ -66,7 +61,7 @@ The message request has this format:
 }
 ```
 
-Get a message ```localhost:3000/messages```
+Get a message `localhost:3000/messages`
 
 Server response:
 
@@ -78,7 +73,7 @@ Server response:
 }
 ```
 
-Delete a message ```localhost:3000/deletemessage/4```
+Delete a message `localhost:3000/deletemessage/how are you?`
 
 Server response:
 
@@ -88,8 +83,9 @@ Server response:
 }
 ```
 
-### User 
-Add user ```localhost:3000/user```
+### User
+
+Add user `localhost:3000/user`
 
 The user request has this format:
 
@@ -101,7 +97,7 @@ The user request has this format:
 }
 ```
 
-Get users ```localhost:3000/user```
+Get users `localhost:3000/user`
 
 Server response:
 
@@ -117,6 +113,4 @@ Server response:
 
 ### [AlexHM](https://github.com/AlexHM)
 
-
 ### [JaviAlonsoH](https://github.com/JaviAlonsoH)
-
